@@ -6,8 +6,7 @@ class A01_원재의메모리복구하기_김시언 {
 	public static void main(String args[]) throws Exception	{		
 		Scanner sc = new Scanner(System.in);
 		int T, count;
-		T=sc.nextInt();
-        sc.nextLine();
+		T=Integer.parseInt(sc.nextLine());
 
 		for(int test_case = 1; test_case <= T; test_case++) {
 			String str = sc.nextLine();
