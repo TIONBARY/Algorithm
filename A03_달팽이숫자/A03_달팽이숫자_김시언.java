@@ -3,7 +3,7 @@ package A03_;
 import java.io.File;
 import java.util.Scanner;
 
-public class Solution {
+public class A03_달팽이숫자_김시언 {
 	public static void main(String[] args) throws Exception{
 		Scanner sc = new Scanner(new File("src/A03_/input.txt"));
 		int T,N,x,y,temp,snailNum;
