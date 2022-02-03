@@ -2,7 +2,7 @@ package A02_;
 
 import java.util.Scanner;
 
-public class Solution {
+public class A02_재귀함수가뭔가요_김시언 {
 
 	static void question(int n, String bar) {
 		System.out.println(bar + "\"재귀함수가 뭔가요?\"");
