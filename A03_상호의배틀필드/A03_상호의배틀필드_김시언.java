@@ -3,9 +3,9 @@ package A03_상호의배틀필드;
 import java.io.File;
 import java.util.Scanner;
 
-public class Solution {
+public class A03_상호의배틀필드_김시언 {
 	public static void main(String[] args) throws Exception {
-		Scanner sc = new Scanner(new File("src/A03_상호의배틀필드/input.txt"));
+		Scanner sc = new Scanner(System.in);
 		char[][] map;
 		String temp,action;
 		int T,N,M,count,x,y;
