@@ -1,11 +1,8 @@
-package B02_;
-
-import java.io.File;
 import java.util.Scanner;
 
-public class Solution {
-	public static void main(String[] args) throws Exception{
-		Scanner sc = new Scanner(new File("src/B02_/input.txt"));
+class B02_파리퇴치_김시언{
+	public static void main(String args[]) throws Exception{
+		Scanner sc = new Scanner(System.in);
 		int[][] zone;
 		int T,N,M,sum,temp;
 		T=sc.nextInt();
@@ -32,7 +29,6 @@ public class Solution {
 					if(temp > sum) sum = temp;
 				}
 			}
-			
 			System.out.println("#"+test_case+" "+sum);
 		}
 		sc.close();
