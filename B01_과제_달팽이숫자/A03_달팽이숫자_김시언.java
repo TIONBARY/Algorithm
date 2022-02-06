@@ -58,7 +58,6 @@ public class A03_달팽이숫자_김시언 {
 					}
 					System.out.println();
 				}
-				System.out.println();
 			}
 		}
 		sc.close();
