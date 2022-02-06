@@ -122,7 +122,6 @@ public class A03_상호의배틀필드_김시언 {
 				}
 				System.out.println();
 			}
-			System.out.println();
 		}
 		sc.close();
 	}
