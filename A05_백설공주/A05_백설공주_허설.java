@@ -16,7 +16,6 @@ public class A05_백설공주_허설 {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
 		input = new int[N];
 		numbers = new int[R];
 		for (int i = 0; i < N; i++) {
