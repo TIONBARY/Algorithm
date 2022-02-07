@@ -1,13 +1,11 @@
-package A05_백설공주;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 
-public class Solution {
+public class A05_백설공주_김시언 {
 	static int man[], dwarf[], sum;
 	
 	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new FileReader("src/A05_백설공주/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		man = new int[9];
 		dwarf = new int[7];
 		
