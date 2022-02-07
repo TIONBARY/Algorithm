@@ -1,14 +1,12 @@
-package A06_괄호짝짓기;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 
-public class Solution {
+public class A06_괄호짝짓기_김시언 {
 	static int T, a1, a2, a3, a4;
 	static char c[];
 
 	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new FileReader("src/A06_괄호짝짓기/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		for (int i = 1; i <= 10; i++) {
 			T = Integer.parseInt(br.readLine());
