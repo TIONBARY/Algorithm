@@ -1,52 +1,43 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Stack;
 
 public class A06_괄호짝짓기_김시언 {
-	static int T, a1, a2, a3, a4;
-	static char c[];
-
+	static int T;
+	static char bracket[];
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Stack<Character> stack = new Stack<>();
 
-		for (int i = 1; i <= 10; i++) {
+		for(int i=1; i<=10; i++) {
 			T = Integer.parseInt(br.readLine());
-			c = br.readLine().toCharArray();
-			a1 = 0;
-			a2 = 0;
-			a3 = 0;
-			a4 = 0;
+			bracket = br.readLine().toCharArray();
+			stack.clear();
 
-			for (int j = 0; j < T; j++) {
-				switch (c[j]) {
-				case '(':
-					a1++;
-					break;
+			Loop : for(int j=0; j<T; j++) {
+				switch (bracket[j]) {
 				case ')':
-					a1--;
-					break;
-				case '{':
-					a2++;
+					if(stack.peek() == '(') stack.pop();
+					else break Loop;
 					break;
 				case '}':
-					a2--;
-					break;
-				case '[':
-					a3++;
+					if(stack.peek() == '{') stack.pop();
+					else break Loop;
 					break;
 				case ']':
-					a3--;
-					break;
-				case '<':
-					a4++;
+					if(stack.peek() == '[') stack.pop();
+					else break Loop;
 					break;
 				case '>':
-					a4--;
+					if(stack.peek() == '<') stack.pop();
+					else break Loop;
 					break;
 				default:
+					stack.push(bracket[j]);
 					break;
 				}
 			}
-			if(a1 == 0 && a2 == 0 && a3 == 0 && a4 == 0) System.out.println("#"+i+" 1");
+			if(stack.empty()) System.out.println("#"+i+" 1");
 			else System.out.println("#"+i+" 0");
 		}
 		br.close();
