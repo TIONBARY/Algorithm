@@ -4,73 +4,66 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
 
 public class A06_괄호짝짓기_허설 {
 
+
 	public static void main(String[] args) throws IOException {
 		int T = 10;
+		Stack<Character> stack = new Stack<>();
 		char[] arr;
-		char[] arr2 = new char[8];
-		// 0,1 -> ()
-		// 2,3 -> {}
-		// 4,5 -> []
-		// 6,7 -> <>
-
-		// 테스트 케이스 10개
-		// 첫줄에 괄호 개수를 받는다
-		// 그다음에 그 수대로 와랄라라라
 		BufferedReader br = new BufferedReader(new FileReader("src\\algol_1\\input2.txt"));
 		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 
 		for (int tc = 1; tc <= T; tc++) {
 			int N = Integer.parseInt(br.readLine()); // 명령어 개수
-			arr = new char[N];
-			String str = br.readLine();
-			for (int i = 0; i < N; i++) {
-				switch (str.charAt(i)) {
-				case '(':
-					arr2[0]++;
-					break;
+			arr = br.readLine().toCharArray();
+			stack.clear(); //초기화를 꼭 시켜줘야한다 
+			// 루프탈출하는 법을 알게 됐다! 
+			out: for (int i = 0; i < N; i++) {
+				switch (arr[i]) { //하나씩 돌면서 닫힌괄호를 찾고 제일 위에있는 열린괄호와 비교한다. 
 				case ')':
-					arr2[1]++;
-					break;
-				case '{':
-					arr2[2]++;
+
+					if (stack.peek() == '(') {
+						stack.pop();
+					} else {
+						break out;
+					}
 					break;
 				case '}':
-					arr2[3]++;
-					break;
-				case '[':
-					arr2[4]++;
+					if (stack.peek() == '{') {
+						stack.pop();
+					} else {
+						break out;
+					}
 					break;
 				case ']':
-					arr2[5]++;
-					break;
-				case '<':
-					arr2[6]++;
+					if (stack.peek() == '[') {
+						stack.pop();
+					} else {
+						break out;
+					}
 					break;
 				case '>':
-					arr2[7]++;
+					if (stack.peek() == '<') {
+						stack.pop();
+					} else {
+						break out;
+					}
 					break;
-
+				default:
+					stack.push(arr[i]);
+					break;
 				}
 			}
-			sb.append("#").append(tc).append(" ").append(match(arr2)).append("\n");
-
-			for (int i = 0; i < 8; i++) {
-				arr2[i] = 0;
-			}
-
+			if (stack.isEmpty())
+				sb.append("#").append(tc).append(" ").append("1").append("\n"); //append 사용이 이렇게 하는건지 잘 모르겠다 
+			else
+				sb.append("#").append(tc).append(" ").append("0").append("\n");
 		}
 		System.out.println(sb);
-	}
-
-	public static int match(char[] arr2) {
-		if (arr2[0] == arr2[1] && arr2[2] == arr2[3] && arr2[4] == arr2[5] && arr2[6] == arr2[7])
-			return 1;
-		else
-			return 0;
 	}
 
 }
