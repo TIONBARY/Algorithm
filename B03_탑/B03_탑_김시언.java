@@ -1,16 +1,14 @@
-package B03_탑;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.util.Stack;
 import java.util.StringTokenizer;
+import java.io.InputStreamReader;
 
-public class Solution_Stack {
+public class B03_탑_김시언 {
 	static Stack<int[]> stack;
 	static StringTokenizer st;
 	static int T, in;
 	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new FileReader("src/B03_탑/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		T = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
 		stack = new Stack<>();
