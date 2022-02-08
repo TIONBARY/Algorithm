@@ -1,12 +1,10 @@
-package A08_암호문1;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class A08_암호문_김시언 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		LinkedList<Integer> list = new LinkedList<>();
