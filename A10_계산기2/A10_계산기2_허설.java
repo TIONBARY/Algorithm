@@ -37,13 +37,11 @@ public class A10_계산기2_허설 {
 					numbers.push(arr[i] - '0');
 
 				} else {
-					if (oper.isEmpty()) {
-						oper.push(arr[i]);
-					} else if ((oper.peek() - '0') <= (arr[i] - '0')) { // 연산자 *가 십진수고 +가 더 작기때문에
+				 	if (oper.isEmpty() &&(oper.peek() - '0') <= (arr[i] - '0')) { // 연산자 *가 십진수고 +가 더 작기때문에
 						loop(); //반복해서.. 빼서 함수화 해봤음.. 
 						oper.push(arr[i]);
 
-					} else {// 연산자인데 같거나 높은게(+가 있는데 *들어온경우)
+					} else {// 스택이 비었거나 연산자가 더 높은게 들어왔을 경우 
 						oper.push(arr[i]);
 					}
 				}
