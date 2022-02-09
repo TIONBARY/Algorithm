@@ -1,14 +1,10 @@
-package A11_계산기3;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Solution {
+public class A11_계산기3_김시언 {
 	public static void main(String[] args) throws Exception {
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("src/A11_계산기3/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Character> stack = new Stack<Character>();
 		Stack<Integer> stack_int = new Stack<Integer>();
 		String math, postfix;
