@@ -12,7 +12,7 @@ public class A10_계산기2_허설 {
 	static Stack<Character> oper = new Stack<>();
 
 	public static void main(String[] args) throws IOException {
-		//BufferedReader br = new BufferedReader(new FileReader("src\\algol_1\\input.txt"));
+		// BufferedReader br = new BufferedReader(new FileReader("src\\algol_1\\input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
@@ -23,41 +23,35 @@ public class A10_계산기2_허설 {
 		// 수 스택에 넣고 연산자 스택에 넣다가 연산자가 또 들어올때 비교
 		// 들어오는 연산자가 우선순위가 낮으면 그 전에거 pop 하고 연산자 푸시
 		// 두수 뽑아서 계산 후 수 스택에 다시 넣는다
-		// 다 끝났으면 저 계산 마저 반복 연산자의 isEmpty()가 트루일때까지
+		// 다 끝났으면 저 계산 마저 반복 isEmpty()가 트루일때까지
 
-
-//		for(int i = 0;i<N;i++) {
-//			System.out.print(arr[i]+" ");
-//		}
-		for(int tc=1;tc<=10;tc++) {
+		for (int tc = 1; tc <= 10; tc++) {
 			sb.append("#").append(tc).append(" ");
 			oper.clear();
 			numbers.clear();
 			int N = Integer.parseInt(br.readLine()); // 배열의 개수?
 			String str = br.readLine();
 			char[] arr = str.toCharArray(); // char 형 배열로 선언
-		for (int i = 0; i < N; i++) {
-			if (arr[i] != '+' && arr[i] != '*') {
-				numbers.push(arr[i] - '0');
-				//System.out.println("numbers 스택에 " + numbers.peek() + "들어옴");
-			} else {
-				if (oper.isEmpty()) {
-					oper.push(arr[i]);
-				} else if ((oper.peek() - '0') <= (arr[i] - '0')) { // 연산자 *가 십진수고 +가 더 작기때문에
-					loop();
-					oper.push(arr[i]);
-					//System.out.println("numbers 스택에 " + numbers.peek() + "들어옴");
-				} else {// 연산자인데 같거나 높은게(+가 있는데 *들어온경우)
-					oper.push(arr[i]);
+			for (int i = 0; i < N; i++) {
+				if (arr[i] != '+' && arr[i] != '*') {
+					numbers.push(arr[i] - '0');
 
+				} else {
+					if (oper.isEmpty()) {
+						oper.push(arr[i]);
+					} else if ((oper.peek() - '0') <= (arr[i] - '0')) { // 연산자 *가 십진수고 +가 더 작기때문에
+						loop(); //반복해서.. 빼서 함수화 해봤음.. 
+						oper.push(arr[i]);
+
+					} else {// 연산자인데 같거나 높은게(+가 있는데 *들어온경우)
+						oper.push(arr[i]);
+					}
 				}
+			} /// 배열 돌면서 스택에 다 넣었음
+			while (!oper.isEmpty()) {
+				loop();
 			}
-		} 
-		while (!oper.isEmpty()) {
-			loop();
-		
-		}
-		sb.append(numbers.pop()).append("\n");
+			sb.append(numbers.pop()).append("\n");
 		}
 		System.out.print(sb);
 	}
@@ -66,11 +60,9 @@ public class A10_계산기2_허설 {
 		switch (operator) {
 		case '+':
 			res = num1 + num2;
-
 			break;
 		case '*':
 			res = num1 * num2;
-
 			break;
 		}
 	}
