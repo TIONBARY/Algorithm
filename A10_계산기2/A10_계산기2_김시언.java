@@ -1,15 +1,11 @@
-package A10_계산기2;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Solution {
+public class A10_계산기2_김시언 {
 	public static void main(String[] args) throws IOException {
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("src/A10_계산기2/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Character> stack = new Stack<Character>();
 		Stack<Integer> stack_int = new Stack<Integer>();
 		int N, result, x, y;
