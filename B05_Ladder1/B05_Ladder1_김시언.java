@@ -8,13 +8,11 @@ public class B05_Ladder1_김시언 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
-		int N, man, index, start[];
+		int N;
 		
 		for(int i=1; i<=10; i++) {
 			N = Integer.parseInt(br.readLine());
 			map = new int[100][100];
-			man = 0;
-			index = 0;
 			result = -1;
 			
 			for(int x=0; x<100; x++) {
@@ -22,18 +20,10 @@ public class B05_Ladder1_김시언 {
 				for(int y=0; y<100; y++) {
 					map[x][y] = Integer.parseInt(st.nextToken());
 				}
-				if(map[0][x] == 1) man++;
 			}
-			start = new int[man];
 			for(int j=0; j<100; j++) {
-				if(map[0][j] == 1) {
-					start[index] = j;
-					index++;
-				}
-			}
-			for(int j=0; j<start.length; j++) {
 				if(result != -1) break;
-				searchLadder(start[j]);
+				if(map[0][j] == 1) searchLadder(j);
 			}
 			
 			System.out.println("#"+N+" "+result);
