@@ -1,16 +1,12 @@
-package B05_Ladder1;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class B05_Ladder1_김시언 {
 	static int result, map[][];
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/B05_Ladder1/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		int N, man, index, start[];
 		
