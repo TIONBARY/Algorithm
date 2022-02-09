@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 //좌,우 ,하 만 탐색 
 
-public class B05_ladder1_허설 {
+public class B05_Ladder1_허설 {
 	static char[][] map = new char[100][100];
 	static int Row, Col;
 
@@ -20,7 +20,7 @@ public class B05_ladder1_허설 {
 
 		for (int tc = 1; tc <= 10; tc++) {
 			int T = Integer.parseInt(br.readLine());
-			Row =-1;Col=-1;
+			Row =99;Col=-1;
 			sb.append("#" + T + " ");
 		
 
@@ -32,15 +32,13 @@ public class B05_ladder1_허설 {
 				}
 			} ////////////// 맵완성///////////////////
 
-			for (int i = 99; i >= 0; i--) {
+			
 				for (int j = 99; j >= 0; j--) {
-					if (map[i][j] == '2') {
-						Row = i;
-						Col = j;
-					}
-
+					if (map[99][j] == '2') 
+					Row = 99; 
+					Col = j;
 				}
-			}
+			
 			int[] dr = { 0, 0, -1 }; // 좌우상 순으로탐색
 			int[] dc = { -1, 1, 0 };
 			boolean[][] isVisited = new boolean[100][100];
