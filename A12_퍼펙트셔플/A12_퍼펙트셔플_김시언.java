@@ -1,14 +1,11 @@
-package A12_퍼펙트셔플;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution {
+public class A12_퍼펙트셔플_김시언 {
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/A12_퍼펙트셔플/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String cards[], cardsL[], cardsR[];
 		int T, N,indexL, indexR;
 		T = Integer.parseInt(br.readLine());
