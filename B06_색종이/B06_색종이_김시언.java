@@ -1,15 +1,11 @@
-package B06_색종이;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class B06_색종이_김시언 {
 	public static void main(String[] args) throws IOException {
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("src/B06_색종이/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		int N, result, x, y, paper[][];	
 		
