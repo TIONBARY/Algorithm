@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class C01_콘테스트 {
+public class C01_콘테스트_허설 {
 	//10C3해서 최댓값 두개 구하기~ ;
 	static int max,cnt,numbers[],input[];
 	public static void main(String[] args) throws Exception {
