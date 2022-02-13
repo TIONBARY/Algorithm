@@ -1,17 +1,12 @@
-package A15_배열돌리기1;
-
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class A15_배열돌리기1_김시언 {
 	public static int dx[] = {0,1,0,-1};
 	public static int dy[] = {1,0,-1,0};
 	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new FileReader("src/A15_배열돌리기1/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		int N, M, R, count, index, x, nextX, y, nextY, temp, map[][];
 
