@@ -1,15 +1,11 @@
-package C01_콘테스트;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class C01_콘테스트_김시언 {
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/C01_콘테스트/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int W, K, pointsW[], pointsK[];
 		pointsW = new int[10];
 		pointsK = new int[10];
