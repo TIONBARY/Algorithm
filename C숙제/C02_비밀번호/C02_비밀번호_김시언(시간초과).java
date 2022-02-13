@@ -1,10 +1,8 @@
-package C02_비밀번호;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class C02_비밀번호_김시언(시간초과) { //시간초과남
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		long N, i, count;
