@@ -22,7 +22,6 @@ public class C03_게임_김시언 {
 			
 			if(from == ball) ball = to;
 			else if(to == ball) ball = from;
-			else continue;
 		}
 		
 		System.out.println(ball);
