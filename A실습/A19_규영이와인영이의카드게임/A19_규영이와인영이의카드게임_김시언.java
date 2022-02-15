@@ -47,21 +47,17 @@ public class A19_규영이와인영이의카드게임_김시언 {
 		br.close();
 	}
 	
-	private static boolean np() {
-		//1. 교환위치 찾기
+	private static boolean np() { //np 순열구하기
 		int i = 8;
 		while(i>0 && in[i-1] >= in[i]) --i;
 		
 		if(i==0) return false;
 		
-		//2. 교환위치에 교환할 값 찾기
 		int j = 8;
 		while(in[i-1] >= in[j]) --j;
 		
-		//3. 교환위치와 교환할 값 교환하기
 		swap(i-1,j);
 		
-		//4. 교환위치 뒤(꼭대기)부터 맨 뒤까지 만들수 있는 가장 작은 순열 생성(오름차순)
 		int k = 8;
 		while(i<k) {
 			swap(i++,k--);
