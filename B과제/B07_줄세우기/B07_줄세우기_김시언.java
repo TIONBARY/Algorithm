@@ -12,7 +12,7 @@ public class B07_줄세우기_김시언 {
 		int N;
 		N = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
-		for(int i=1; i<=N; i++) {
+		for(int i=1; i<=N; i++) { //list에 add하는 위치를 현재 list사이즈에서 입력값을 뺀 위치에 1번학생부터 N번 학생까지 입력
 			int temp = list.size() - Integer.parseInt(st.nextToken());
 			list.add(temp,i);
 		}
