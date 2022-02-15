@@ -1,17 +1,13 @@
-package A19_규영이와인영이의카드게임;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution2 {
+public class A19_규영이와인영이의카드게임_김시언 {
 	static int gyu[], in[], scoreG, scoreI, winG;
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/A19_규영이와인영이의카드게임/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		int T, card[];
 		T = Integer.parseInt(br.readLine());
@@ -19,7 +15,6 @@ public class Solution2 {
 		in = new int[9];
 		
 		for(int i=1; i<=T; i++) {
-			
 			winG = 0;
 			card = new int[19];
 			st = new StringTokenizer(br.readLine());
