@@ -28,8 +28,6 @@ public class A20_도영이가만든맛있는음식_김시언 {
 	private static void generateSubset(food input[]) {
 		int S, B, N, flavor;
 		N = input.length;
-		S = 1;
-		B = 0;
 		for(int flag=0,caseCount=1<<N; flag<caseCount; flag++) {
 			S = 1;
 			B = 0;
