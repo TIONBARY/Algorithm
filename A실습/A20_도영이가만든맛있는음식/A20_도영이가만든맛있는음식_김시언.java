@@ -1,11 +1,9 @@
-package A20_도영이가만든맛있는음식;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class A20_도영이가만든맛있는음식_김시언 {
 	static int result;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
