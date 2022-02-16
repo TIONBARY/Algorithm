@@ -1,16 +1,12 @@
-package B09_쿼드트리;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class B09_쿼드트리_김시언 {
 	static int map[][];
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws IOException {
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("src/B09_쿼드트리/input.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String s;
 		int N;
 		N = Integer.parseInt(br.readLine());
@@ -55,8 +51,6 @@ public class Main {
 				}
 			}
 		}
-		
 		return true;
 	}
-
 }
