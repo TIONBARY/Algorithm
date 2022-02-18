@@ -1,11 +1,9 @@
-package B10_알파벳;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B10_알파벳_김시언 {
 	static int R, C, result, visit[], map[][];
 	static int dx[] = {1,0,-1,0};
 	static int dy[] = {0,1,0,-1};
