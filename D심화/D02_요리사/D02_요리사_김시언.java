@@ -1,16 +1,12 @@
-package D02_요리사;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Solution {
+public class D02_요리사_김시언 {
 	static int N, result, synergy[][], visit[];
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/D02_요리사/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String s[];
 		int T;
 		T = Integer.parseInt(br.readLine());
@@ -40,7 +36,7 @@ public class Solution {
 	}
 	
 	private static void combination(int cnt, int start) {
-		if(cnt == N/2) { //기저조건을 전체 재료수의 절반이 선택되었을 떄
+		if(cnt == N/2) { //기저조건을 '전체 재료수의 절반이 선택되었을 때'로 설정
 			calSynergy(); 
 			return;
 		}
@@ -72,7 +68,7 @@ public class Solution {
 			}
 		}
 		
-		for(int x=0; x<N/2; x++) { //조합을 계산하는 식으로 list를 돌려 각 음식의 시너지합을 계산
+		for(int x=0; x<N/2; x++) { //조합을 계산하는 식으로 배열를 돌려 각 음식의 시너지합을 계산
 			for(int y=x+1; y<N/2; y++) {
 				foodA += synergy[a[x]][a[y]] + synergy[a[y]][a[x]];
 				foodB += synergy[b[x]][b[y]] + synergy[b[y]][b[x]];
