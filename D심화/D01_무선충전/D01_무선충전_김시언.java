@@ -1,18 +1,14 @@
-package D01_무선충전;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Solution2 {
+public class D01_무선충전_김시언 {
 	static Man a,b;
 	static BC bc[];
 	static int result;
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/D01_무선충전/input.txt"));
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String s[], ss[];
 		int T, M, A, sum, max, batteryA, batteryB, moveA[], moveB[];
 		T = Integer.parseInt(br.readLine());
