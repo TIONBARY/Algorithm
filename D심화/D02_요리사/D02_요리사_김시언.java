@@ -58,11 +58,11 @@ public class D02_요리사_김시언 {
 		indexB = 0;
 		
 		for(int i=0; i<N; i++) {
-			if(visit[i] == 1) { //조합에서 선택된 재료들을 listA에 넣어줌
+			if(visit[i] == 1) { //조합에서 선택된 재료들을 a[]에 넣어줌
 				a[indexA] = i;
 				indexA++;
 			}
-			else { //조합에서 선택안된 재료들은 listB에 넣어줌
+			else { //조합에서 선택안된 재료들은 b[]에 넣어줌
 				b[indexB] = i;
 				indexB++;
 			}
