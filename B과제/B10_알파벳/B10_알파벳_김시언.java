@@ -21,7 +21,8 @@ public class B10_알파벳_김시언 {
 		for(int i=0; i<R; i++) {
 			s = br.readLine();
 			for(int j=0; j<C; j++) {
-				map[i][j] = s.charAt(j)-'A';
+				map[i][j] = s.charAt(j)-'A';//char-'0'방식으로 char변수를 int변수로 변환해서 저장하는 방식을 사용 
+											//'A'를 뺴주면 알파벳 A가 0으로 들어가고 B가 1 ... 
 			}
 		}
 		
