@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main2 {
+public class 지옥의벌집 {
 	static int N, M, map[][], visit[][];
 	static String result = new String();
 	static int dx[] = {1,0,-1,0};
