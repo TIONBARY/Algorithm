@@ -1,10 +1,8 @@
-package A24_서로소집합;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution {
+public class A24_서로소집합_김시언 {
 	static int N, M, parents[];
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
