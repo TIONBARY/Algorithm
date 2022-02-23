@@ -1,12 +1,10 @@
-package A22_DFS와BFS;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class A22_DFS와BFS_김시언 {
 	static int N;
 	static StringBuilder sb = new StringBuilder();
 	
