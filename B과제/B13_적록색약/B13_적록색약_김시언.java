@@ -1,10 +1,8 @@
-package B13_적록색약;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class B13_적록색약_김시언 {
 	static int N;
 	static char map[][];
 	static boolean visited[][];
