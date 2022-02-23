@@ -1,11 +1,9 @@
-package B11_암호만들기;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class B11_암호만들기_김시언 {
 	static int L, C;
 	static String alphabet[], password[];
 	static boolean visited[];
