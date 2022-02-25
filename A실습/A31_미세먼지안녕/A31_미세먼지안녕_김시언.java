@@ -1,23 +1,11 @@
-package A31_미세먼지안녕;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class A31_미세먼지안녕_김시언 {
 	static int R, C, T, airCleaner, dust[][];
 	static int dx[] = {-1,0,1,0};
 	static int dy[] = {0,1,0,-1};
-	
-	static class Node{
-		int x, y;
-
-		public Node(int x, int y) {
-			super();
-			this.x = x;
-			this.y = y;
-		}
-	}
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
