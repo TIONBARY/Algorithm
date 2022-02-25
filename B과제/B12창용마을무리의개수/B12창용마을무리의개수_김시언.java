@@ -1,10 +1,8 @@
-package B12_창용마을무리의개수;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution {
+public class B12창용마을무리의개수_김시언 {
 	static int N, M, result, parents[];
 	static boolean visited[];
 	public static void main(String[] args) throws IOException {
