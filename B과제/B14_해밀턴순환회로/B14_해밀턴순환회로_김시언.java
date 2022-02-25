@@ -1,10 +1,8 @@
-package B14_헤밀턴순환회로;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class B14_해밀턴순환회로_김시언 {
     static boolean visited[];
     static int result, sum, N, map[][];
     
