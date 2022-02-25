@@ -1,12 +1,10 @@
-package A30_토마토;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main2 {
+public class A30_토마토_김시언 {
 	static int N, M, day, yet, box[][];
 	static int dx[] = {-1, 0, 1, 0};
 	static int dy[] = {0, 1, 0, -1};
